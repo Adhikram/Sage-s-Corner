@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SampleApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+<title>Simple App</title>
+<meta charset="utf-8">
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag 'application', media: 'all',
+'data-turbolinkstrack': 'reload' %>
+<%= javascript_pack_tag 'application', 'data-turbolinkstrack': 'reload' %>
+</head>
+<body>
+<header class="navbar navbar-fixed-top navbar-inverse">
+<div class="container">
+<%= link_to "Simple APP", '#', id: "logo" %>
+<nav>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "Home", '#' %></li>
+<li><%= link_to "Help", '#' %></li>
+<li><%= link_to "Log in", '#' %></li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="container">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<%= yield %>
+<img alt="Rails logo" width="200px" src="/app/assets/images/rails.svg">
+</div>
+</body>
 </html>
