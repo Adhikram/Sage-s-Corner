@@ -21,6 +21,7 @@ gem 'bcrypt', '3.1.13'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'active_storage_validations', '0.8.2'
 gem 'faker', '2.1.2'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
