@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       # flash[:info] = 'Please check your email to activate your account.'
       # redirect_to root_url
       log_in @user
-      flash[:success] = 'Welcome to the Sage's Corner!'
+      flash[:success] = "Welcome to the Sage's Corner!"
       redirect_to @user
     else
       render 'new'
