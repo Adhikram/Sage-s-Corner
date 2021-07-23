@@ -50,6 +50,13 @@ class User < ApplicationRecord
 
   #   BCrypt::Password.new(digest).is_password?(token)
   # end
+  def self.search(query)
+    if query.nil?
+      all
+    else
+      where('name like ?', "%#{query}%")
+    end
+  end
 
   # Forgets a user.
   def forget
